@@ -1,0 +1,9 @@
+<h1> 안녕하세요. 여기서 글자를 세세요! </h1>
+
+<a href="{% url 'about' %}">ABOUT</a> <!-- 템플릿 테그를 이용해서 url표현하기(html에 파이썬 코드 표현)-->
+
+<form action="{% url 'result' %}"><!--action속성을 이용해서 form태그 안에 있는 내용을 result함수(view.py안에 있는)로 보낸다-->
+    <textarea cols="40" rows="10" name="fulltext"></textarea>
+    <br>
+    <input type="submit" value="count"> <!-- submit누르면 views.py안의 result함수로 가서 textarea에서 입력받는 데이터가 언제 어떻게 처리될지 결정됨-->
+</form>
